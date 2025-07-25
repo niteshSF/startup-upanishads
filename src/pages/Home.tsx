@@ -1,4 +1,3 @@
-// import { useNavigate } from "react-router-dom";
 import { useState, useRef, useEffect } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faVolumeUp, faVolumeMute } from '@fortawesome/free-solid-svg-icons';  // Import FontAwesome icons
@@ -9,7 +8,6 @@ import FallbackImage from "../assets/bg_static_image.png"
 
 const Home = () => {
 
-  // =======================================================================================================
   const [videoEnded, setVideoEnded] = useState(false)
 
   useEffect(() => {
@@ -29,7 +27,6 @@ const Home = () => {
     }, 1000)
   }
 
-  // =======================================================================================================
 
   // State to control whether the audio is playing or not
   const [isAudioPlaying, setIsAudioPlaying] = useState(true); 
@@ -37,16 +34,13 @@ const Home = () => {
   const audioRef = useRef<HTMLAudioElement | null>(null); 
 
   const handleNavigateIsha = () => {
-    // window.location.href = 'https://test1.samskritifoundation.org/isha/';
-    window.location.href = 'http://localhost:5176/isha';
+    window.location.href = 'https://test1.samskritifoundation.org/isha/';
   };
   const handleNavigateKena = () => {
-    // window.location.href = 'https://test1.samskritifoundation.org/kena/';
-    window.location.href = 'http://localhost:5175/kena';
+    window.location.href = 'https://test1.samskritifoundation.org/kena/';
   };
   const handleNavigateKatha = () => {
-    // window.location.href = 'https://test1.samskritifoundation.org/katha/';
-    window.location.href = 'http://localhost:5174/katha';
+    window.location.href = 'https://test1.samskritifoundation.org/katha/';
   };
 
   // Function to toggle audio on and off
@@ -63,9 +57,6 @@ const Home = () => {
 
   return (
     <div className="relative w-screen h-screen ">
-      {/* Video Element */}
-
-      {/* ======================================================================================================= */}
 
       {/* merged the video and static page */}
       <div className="relative w-full h-full">
@@ -102,8 +93,6 @@ const Home = () => {
           />
         )}
       </div>
-
-      {/* ======================================================================================================= */}
 
       {/* Audio Element */}
       <audio
